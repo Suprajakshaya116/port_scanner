@@ -12,5 +12,5 @@ A lightweight, blazing-fast CLI network utility engineered in Rust to scan netwo
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/rust-port-scanner.git](https://github.com/YOUR_USERNAME/rust-port-scanner.git)
-   cd rust-port-scanner
+   git clone [https://github.com/Suprajakshaya116/port_scannergit](https://github.com/Suprajakshaya116/port_scanner.git)
+   cd port_scanner
