@@ -8,6 +8,11 @@ A lightweight, blazing-fast CLI network utility engineered in Rust to scan netwo
 - **Beautiful UI:** Provides a live rendering progress bar and structural summary reporting.
 - **Safe Architecture:** Guarantees data-race safety using Rust's safe message-passing channels (`std::sync::mpsc`).
 
+## 🏗️ Technical Architecture Details
+- **Resource-Optimized Thread Pool:** Instead of unbounded thread creation, the architecture manages resources deterministically via a configured worker pool (`MAX_WORKERS`), preventing kernel thread starvation.
+- **Thread-Safe Shared Queue:** Utilizes thread-safe smart pointers `std::sync::Arc` wrapped around a mutual exclusion primitive `std::sync::Mutex` to handle dynamic atomic task distribution across workers without deadlocks.
+- **Service Banner Identification:** Features standard protocol signature tracking to automatically cross-reference open socket hits to native service handlers (e.g., HTTP, SSH, HTTPS).
+
 ## 🛠️ Installation & Setup
 
 1. Clone the repository:
